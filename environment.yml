@@ -1,7 +1,9 @@
 name: vmm
 channels:
-  - conda-forge
   - defaults
+  - conda-forge
+  - https://repo.anaconda.com/pkgs/main
+  - https://repo.anaconda.com/pkgs/r
 dependencies:
   - _libgcc_mutex=0.1=conda_forge
   - _openmp_mutex=4.5=2_gnu
@@ -9,11 +11,12 @@ dependencies:
   - brotli-python=1.1.0=py312h30efb56_1
   - bs4=4.12.3=hd8ed1ab_0
   - bzip2=1.0.8=h4bc722e_7
-  - ca-certificates=2024.7.4=hbcca054_0
-  - certifi=2024.7.4=pyhd8ed1ab_0
+  - ca-certificates=2024.11.26=h06a4308_0
+  - certifi=2024.12.14=py312h06a4308_0
   - cffi=1.16.0=py312hf06ca03_0
   - charset-normalizer=3.3.2=pyhd8ed1ab_0
   - colorama=0.4.6=pyhd8ed1ab_0
+  - googlesearch=3.0.0=pyhd8ed1ab_1
   - h2=4.1.0=pyhd8ed1ab_0
   - hpack=4.0.0=pyh9f0ad1d_0
   - hyperframe=6.0.1=pyhd8ed1ab_0
@@ -48,4 +51,4 @@ dependencies:
   - xz=5.2.6=h166bdaf_0
   - zstandard=0.23.0=py312h3483029_0
   - zstd=1.5.6=ha6fb4c9_0
-prefix: /home/derek/miniconda3/envs/vmm
+prefix: /home/derek/git/public/miniconda3/envs/vmm
