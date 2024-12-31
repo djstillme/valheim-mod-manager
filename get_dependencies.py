@@ -86,9 +86,9 @@ def main():
                 if chunk:
                     f.write(chunk)
 
-        newpath = os.path.join(modsdir, os.path.splitext(filename)[0])
+        newpath = os.path.join(modsdir, mod)
         os.makedirs(newpath)
-        shutil.unpack_archive(fileloc, modsdir + '/' + os.path.splitext(filename)[0])
+        shutil.unpack_archive(fileloc, modsdir + '/' + mod)
 
 if __name__ == "__main__":
     main()
