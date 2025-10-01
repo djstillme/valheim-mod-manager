@@ -6,8 +6,6 @@ Simple CLI-based Valheim mod manager made in response to the `Network Error Bug`
 
 Any Linux user who is encountering problems with being able to download mods may find this useful, specifically the `Network Error Bug` that I have experienced on multiple Arch-based machines.
 
-*Note:* If you not are using Linux, or are not experiencing this specific bug, I'd recommend you use [Thunderstore Mod Manager](https://www.overwolf.com/app/thunderstore-thunderstore_mod_manager) instead - as setup and maintenance of mods will be much smoother.
-
 ## Requirements
 
 1. Python version > 3.0.0 must be installed
@@ -40,7 +38,8 @@ Adding mods is as easy as copying the URL for the modpage on the Thunderstore we
    https://thunderstore.io/c/valheim/p/Smoothbrain/CreatureLevelAndLootControl/
    https://thunderstore.io/c/valheim/p/Advize/PlantEverything/
    ```
-_Note: Mod Dependencies will be automatically identified and installed, you do not need to add all the dependencies in mods.csv_
+> [!IMPORTANT]
+> Mod Dependencies will be automatically identified and installed, you do not need to add all the dependencies in mods.csv.
 
 ### Removing Mods
 
@@ -60,8 +59,8 @@ Then in the project directory run
 ```
 python vmm.py
 ```
-_Note: This may take a while depending on how many mods you've installed and your internet download speed!_
-
+> [!NOTE]
+> This may take a while depending on how many mods you've installed and your internet download speed!
 
 ### Updating Mods
 
@@ -69,10 +68,12 @@ To update mods to their latest version, all you need to do is run the script aga
 ```
 python vmm.py
 ```
-_Note: Remember to execute this command in the conda env_ `vmm`
+> [!TIP]
+> Remember to execute this command in the conda environment: `vmm`
 
 ## Launching the Game
 
 After you've run the script to install the mods you're ready to play! In steam you should be able to set launch paramters to make the game initialize using BepInEx according to the [Arch Linux Wiki](https://wiki.archlinux.org/title/Valheim) and just push play and launch as normal. **BUT** this isn't personally working for me, nor is any other variation of launch parameter, so if this is not working then a workaround is to open the game file directory containing _start_game_bepinex.sh_ and execute the command manually with `./start_game_bepinex.sh`.
 
-_Note: It may take a while to launch, typically a few minutes depending on your number of mods_
+> [!NOTE]
+> It may take the game some time to launch depending on the number of installed mods, be patient... DO NOT PANIC!!!
