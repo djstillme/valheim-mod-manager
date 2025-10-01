@@ -2,33 +2,45 @@
 
 Simple CLI-based Valheim mod manager made in response to the `Network Error Bug` that many Linux users seem to experience -- making it __impossible__ to download certain mods on Linux machines. This script is designed to be used as a standalone mod manager, and is currently compatible with **all** mods available on [thunderstore.io](https://thunderstore.io/c/valheim/).
 
-## Who Should Use This?
+## 🤔 Who Should Use This?
 
 Any Linux user who is encountering problems with being able to download mods may find this useful, specifically the `Network Error Bug` that I have experienced on multiple Arch-based machines.
 
-## Requirements
+## 🪄 Installation
 
-1. Python version > 3.0.0 must be installed
-2. Install [conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html) package manager
-3. Resolve dependencies by executing the following in the project directory
-   ```
-   conda env create -f environment.yml
-   ```
+### Prerequisites
 
-## Setup + Configuration
-1. Navigate to [BepInEx](https://thunderstore.io/c/valheim/p/denikson/BepInExPack_Valheim/) and select _manual download_
-2. Extract BepInEx from the zip folder
-3. Inside the extracted folder denikson-BepInExPack_Valheim-X.X.XXXX there should be another folder named **BepInExPack_Valheim**, place the contents of this folder into /home/YOUR_NAME_HERE/.local/share/Steam/steamapps/common/Valheim (or wherever your Valheim games folder is installed to)
-4. Make _start_game_bepinex.sh_ into an executable by running `chmod +x start_game_bepinex.sh`
-5. Open `config.ini` in the project directory and change `mods_dir` to be your copied directory from above, so that your config.ini file looks like
+- Python version > 3.0.0
+- [conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html) package manager
+
+### 🐾 Step-by-Step Instructions
+
+1. Clone this repository to your local machine
+
+```
+git clone https://github.com/djstillme/valheim-mod-manager.git
+```
+   
+2. Resolve dependencies by executing the following in the project directory
+   
+```
+conda env create -f environment.yml
+```
+3. Navigate to [BepInEx](https://thunderstore.io/c/valheim/p/denikson/BepInExPack_Valheim/), select manual download, then extract BepInEx from the zip folder upon completion
+   
+4. Inside the extracted folder "denikson-BepInExPack_Valheim-X.X.XXXX" there should be another folder named "BepInExPack_Valheim", place the contents of this folder into "/home/YOUR_USERNAME_HERE/.local/share/Steam/steamapps/common/Valheim" _(or wherever your Valheim games folder is installed to)_
+   
+5. Make `start_game_bepinex.sh` into an executable by running `chmod +x start_game_bepinex.sh`
+   
+6. Open `config.ini` in the project directory and change `mods_dir` to be your copied directory from above, so that your config.ini file looks like
    ```
    [PARAMETERS]
-   mods_dir = /home/YOUR_NAME_HERE/.local/share/Steam/steamapps/common/Valheim/BepInEx/plugins
+   mods_dir = /home/YOUR_USERNAME_HERE/.local/share/Steam/steamapps/common/Valheim/BepInEx/plugins
    mods_csv = mods.csv
    dependencies_csv = dependencies.csv
    ```
 
-## Usage
+## 📦 Usage
 
 ### Adding Mods
 
@@ -40,14 +52,6 @@ Adding mods is as easy as copying the URL for the modpage on the Thunderstore we
    ```
 > [!IMPORTANT]
 > Mod Dependencies will be automatically identified and installed, you do not need to add all the dependencies in mods.csv.
-
-### Removing Mods
-
-To remove mods just delete the corresponding webpage URL in `mods.csv`, in the above example we can remove [CreatureLevelAndLootControl](https://thunderstore.io/c/valheim/p/Smoothbrain/CreatureLevelAndLootControl/) by simply removing it's URL
-   ```
-   https://thunderstore.io/c/valheim/p/ValheimModding/Jotunn/
-   https://thunderstore.io/c/valheim/p/Advize/PlantEverything/
-   ```
 
 ### Downloading Mods
 
@@ -70,6 +74,14 @@ python vmm.py
 ```
 > [!TIP]
 > Remember to execute this command in the conda environment: `vmm`
+
+### Removing Mods
+
+To remove mods just delete the corresponding webpage URL in `mods.csv`, in the above example we can remove [CreatureLevelAndLootControl](https://thunderstore.io/c/valheim/p/Smoothbrain/CreatureLevelAndLootControl/) by simply removing it's URL
+   ```
+   https://thunderstore.io/c/valheim/p/ValheimModding/Jotunn/
+   https://thunderstore.io/c/valheim/p/Advize/PlantEverything/
+   ```
 
 ## Launching the Game
 
