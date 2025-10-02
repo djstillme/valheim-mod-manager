@@ -38,6 +38,12 @@ conda env create -f environment.yml
 
 ## 📦 Usage
 
+> [!IMPORTANT]
+> For all of the below commands, make sure that you activate the conda environment prior to using — you can do so like this: 
+> ```
+> conda activate vmm
+> ```
+
 ### Adding Mods
 
 Adding mods is as easy as copying the URL for the modpage on the Thunderstore website and pasting it into the `mods.csv` file in the project directory, for example to add [Jotunn](https://thunderstore.io/c/valheim/p/ValheimModding/Jotunn/), [CreatureLevelAndLootControl](https://thunderstore.io/c/valheim/p/Smoothbrain/CreatureLevelAndLootControl/), and [PlantEverything](https://thunderstore.io/c/valheim/p/Smoothbrain/CreatureLevelAndLootControl/) your mods.csv will look like:
@@ -51,14 +57,12 @@ Adding mods is as easy as copying the URL for the modpage on the Thunderstore we
 
 ### Downloading Mods
 
-Once you've modified your `mods.csv` file to your liking, you can run the script to actually install them. First ensure that you are in the conda environment:
- ```
-conda activate vmm
- ```
-then in the project directory run:
+Once you've modified your `mods.csv` file to your liking, you can run the script to actually install them: 
+
 ```
 python vmm.py
 ```
+
 > [!NOTE]
 > This may take a while depending on how many mods you've installed and your internet download speed!
 
@@ -68,8 +72,6 @@ To update mods to their latest version, all you need to do is run the script aga
 ```
 python vmm.py
 ```
-> [!TIP]
-> Remember to execute this command in the conda environment: `vmm`
 
 ### Removing Mods
 
