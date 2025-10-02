@@ -2,10 +2,6 @@
 
 Simple CLI-based Valheim mod manager made in response to the `Network Error Bug` that many Linux users seem to experience -- making it __impossible__ to download certain mods on Linux machines. This script is designed to be used as a standalone mod manager, and is currently compatible with **all** mods available on [thunderstore.io](https://thunderstore.io/c/valheim/).
 
-## 🤔 Who Should Use This?
-
-Any Linux user who is encountering problems with being able to download mods may find this useful, specifically the `Network Error Bug` that I have experienced on multiple Arch-based machines.
-
 ## 🪄 Installation
 
 ### Prerequisites
@@ -44,7 +40,7 @@ conda env create -f environment.yml
 
 ### Adding Mods
 
-Adding mods is as easy as copying the URL for the modpage on the Thunderstore website and pasting it into the `mods.csv` file in the project directory, for example to add [Jotunn](https://thunderstore.io/c/valheim/p/ValheimModding/Jotunn/), [CreatureLevelAndLootControl](https://thunderstore.io/c/valheim/p/Smoothbrain/CreatureLevelAndLootControl/), and [PlantEverything](https://thunderstore.io/c/valheim/p/Smoothbrain/CreatureLevelAndLootControl/) your mods.csv will look like
+Adding mods is as easy as copying the URL for the modpage on the Thunderstore website and pasting it into the `mods.csv` file in the project directory, for example to add [Jotunn](https://thunderstore.io/c/valheim/p/ValheimModding/Jotunn/), [CreatureLevelAndLootControl](https://thunderstore.io/c/valheim/p/Smoothbrain/CreatureLevelAndLootControl/), and [PlantEverything](https://thunderstore.io/c/valheim/p/Smoothbrain/CreatureLevelAndLootControl/) your mods.csv will look like:
    ```
    https://thunderstore.io/c/valheim/p/ValheimModding/Jotunn/
    https://thunderstore.io/c/valheim/p/Smoothbrain/CreatureLevelAndLootControl/
@@ -55,11 +51,11 @@ Adding mods is as easy as copying the URL for the modpage on the Thunderstore we
 
 ### Downloading Mods
 
-Once you've modified your `mods.csv` file to your liking, you can run the script to actually install them. First ensure that you are in the conda environment
+Once you've modified your `mods.csv` file to your liking, you can run the script to actually install them. First ensure that you are in the conda environment:
  ```
 conda activate vmm
  ```
-Then in the project directory run
+then in the project directory run:
 ```
 python vmm.py
 ```
@@ -68,7 +64,7 @@ python vmm.py
 
 ### Updating Mods
 
-To update mods to their latest version, all you need to do is run the script again
+To update mods to their latest version, all you need to do is run the script again:
 ```
 python vmm.py
 ```
@@ -77,11 +73,17 @@ python vmm.py
 
 ### Removing Mods
 
-To remove mods just delete the corresponding webpage URL in `mods.csv`, in the above example we can remove [CreatureLevelAndLootControl](https://thunderstore.io/c/valheim/p/Smoothbrain/CreatureLevelAndLootControl/) by simply removing it's URL
+To remove mods just delete the corresponding webpage URL in `mods.csv`, in the above example we can remove [CreatureLevelAndLootControl](https://thunderstore.io/c/valheim/p/Smoothbrain/CreatureLevelAndLootControl/) by simply removing it's URL:
    ```
    https://thunderstore.io/c/valheim/p/ValheimModding/Jotunn/
    https://thunderstore.io/c/valheim/p/Advize/PlantEverything/
    ```
+
+and then run the script again:
+
+```
+python vmm.py
+```
 
 ## Launching the Game
 
